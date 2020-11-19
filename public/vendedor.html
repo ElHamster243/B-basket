@@ -23,7 +23,7 @@
 
         <div id="MiTienda" class="tabcontent">
             <h3>Datos de Mi Tienda</h3>
-            <!--Formulario para datos de la tienda-->
+            <!--FORMULARIO PARA LOS DATOS DE LA TIENDA-->
             <form action="/action_page.php">
                 <label for="tnombre">Nombre de la tienda:</label>
                 <input type="text" id="tnombre" name="tnombre" required="required"><br><br>
@@ -46,7 +46,7 @@
 
         <div id="Productos" class="tabcontent">
             <h3>Información de Mis Productos</h3>
-            <!--Formulario para datos del producto-->
+            <!--FORMULARIO PARA LOS DATOS DE LOS PRODUCTOS-->
             <form action="/action_page.php">
                 <label for="pnombre">Nombre del producto:</label>
                 <input type="text" id="pnombre" name="pnombre" required="required"><br><br>
@@ -56,14 +56,43 @@
                 <select type="text" id="pmedida" name="pmedida" required="required"></select><br><br>
                 <label for="pcantidad">Cantidad del producto:</label>
                 <input type="text" id="pcantidad" name="pcantidad" required="required"><br><br>
+                <label for="pfoto">Agrega una imagen a tu producto:</label>
+                <input type="file" id="pfoto" name="pfoto"><br><br>
 
-                <input type="submit" value="REGISTRAR">
+                <input type="submit" value="BORRAR">
+                <input type="submit" value="ACTUALIZAR">
+                <input type="submit" value="CREAR">
+                <br><br>
+
+                <!--HACER LA TABLA RESPONSIVA Y TRAER LOS DATOS PARA LA MISMA-->
+                <table>
+                    <tr>
+                      <th>Nombre del producto</th>
+                      <th>Cantidad</th>
+                      <th>Precio</th>
+                      <th>Imagen</th>
+                    </tr>
+                    <tr>
+                      
+                    </tr>
+                    <tr>
+                      
+                    </tr>
+                    <tr>
+                      
+                    </tr>
+                    <tr>
+                     
+                  </tr>
+                  
+                  </table>
+
             </form>
         </div>
 
         <div id="Ofertas" class="tabcontent">
-            <h3>Información de mis Ofertas</h3>
-            <!--Formulario para datos de las ofertas-->
+            <h3>Información de Mis Ofertas</h3>
+            <!--FORMULARIO PARA LOS DATOS DE LAS OFERTAS-->
             <form action="/action_page.php">
                 <label for="oproducto">Producto:</label>
                 <select type="text" id="oproducto" name="oproducto" required="required"></select><br><br>
@@ -74,11 +103,12 @@
                 <label for="odescuento">Descuento:</label>
                 <input type="text" id="odescuento" name="odescuento" required="required"><br><br>
 
-                <input type="submit" value="AGREGAR"
+                <input type="submit" value="AGREGAR">
           </form>
         </div>
 
         <script>
+                
         function openCity(evt, cityName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
