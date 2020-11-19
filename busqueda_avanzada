@@ -11,7 +11,98 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    
+    <h1>B-basket</h1>
+
+        <div class="topnav">
+        <a  href="perfil.html">Perfil</a>
+        <a href="buscar.html">Buscar</a>
+        <a class="active" href="#vendedor.hmtl">Vendedor</a>
+        <a href="salir.html">Salir</a>
+        </div>
+        <br>
+
+        <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'MiTienda')" id="defaultOpen">Mi Tienda</button>
+        <button class="tablinks" onclick="openCity(event, 'Productos')">Productos</button>
+        <button class="tablinks" onclick="openCity(event, 'Ofertas')">Ofertas</button>
+        </div>
+
+        <div id="MiTienda" class="tabcontent">
+            <h3>Datos de Mi Tienda</h3>
+            <!--Formulario para datos de la tienda-->
+            <form action="/action_page.php">
+                <label for="tnombre">Nombre de la tienda:</label>
+                <input type="text" id="tnombre" name="tnombre" required="required"><br><br>
+                <label for="testado">Estado:</label>
+                <select type="text" id="testado" name="testado" required="required"></select><br><br>
+                <label for="tciudad">Ciudad:</label>
+                <select type="text" id="tciudad" name="tciudad" required="required"></select><br><br>
+                <label for="tcalle">Calle:</label>
+                <input type="text" id="tcalle" name="tcalle" required="required"><br><br>
+                <label for="tcolonia">Colonia:</label>
+                <input type="text" id="tcolonia" name="tcolonia" required="required"><br><br>
+                <label for="tcodigop">Codigo Postal:</label>
+                <input type="text" id="tcodigop" name="tcodigop" required="required"><br><br>
+                <label for="ttipo">Tipo:</label>
+                <select type="text" id="ttipo" name="ttipo" required="required"></select><br><br>
+
+                <input type="submit" value="REGISTRAR">
+            </form>
+        </div>
+
+        <div id="Productos" class="tabcontent">
+            <h3>Información de Mis Productos</h3>
+            <!--Formulario para datos del producto-->
+            <form action="/action_page.php">
+                <label for="pnombre">Nombre del producto:</label>
+                <input type="text" id="pnombre" name="pnombre" required="required"><br><br>
+                <label for="ptamaño">Tamaño:</label>
+                <input type="text" id="ptamaño" name="ptamaño" required="required"><br><br>
+                <label for="pmedida">Medida:</label>
+                <select type="text" id="pmedida" name="pmedida" required="required"></select><br><br>
+                <label for="pcantidad">Cantidad del producto:</label>
+                <input type="text" id="pcantidad" name="pcantidad" required="required"><br><br>
+
+                <input type="submit" value="REGISTRAR">
+            </form>
+        </div>
+
+        <div id="Ofertas" class="tabcontent">
+            <h3>Información de mis Ofertas</h3>
+            <!--Formulario para datos de las ofertas-->
+            <form action="/action_page.php">
+                <label for="oproducto">Producto:</label>
+                <select type="text" id="oproducto" name="oproducto" required="required"></select><br><br>
+                <label for="otamaño">Tamaño:</label>
+                <select type="text" id="otamaño" name="otamaño" required="required"></select><br><br>
+                <label for="oprecio">Precio:</label>
+                <input type="text" id="oprecio" name="oprecio" required="required"><br><br>
+                <label for="odescuento">Descuento:</label>
+                <input type="text" id="odescuento" name="odescuento" required="required"><br><br>
+
+                <input type="submit" value="AGREGAR"
+          </form>
+        </div>
+
+        <script>
+        function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
