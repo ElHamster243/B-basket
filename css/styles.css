@@ -62,3 +62,17 @@
   #pnlPrincipal{
     background-color: #6d726e;
   }
+  #pnlBusqueda{
+    background-color: #0e2329;
+  }
+  body{
+    background-color: #182627;
+  }
+  .my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }

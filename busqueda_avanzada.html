@@ -11,7 +11,7 @@
     <title>Bienvenido, nombre_de_usuario.</title>
   </head>
   <body>
-    <div class="container-fluid" id="pnlPrincipal">
+    <div class="container-sm text-center" id="pnlPrincipal">
         <div class="row" id="pnlNavegacion">
             <div class="col">
                 <div class="btn-group btn-group-lg" role="group">
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-sm" id="pnlBusqueda">
+        <div class="container-sm text-center" id="pnlBusqueda">
             <div class="col">
                 <p class="h4 text-white">Búsqueda avanzada:</p>
             </div>
@@ -87,7 +87,7 @@
                         </select>
                     </div>
                     <div class="col-sm">
-                        <label for="ciudad" class="h5 text-white">Ciudad</label>
+                        <label for="ciudad" class="h5 text-white">Ciudad:</label>
                         <select class="form-control" id="ciudad">
                             <option>Veracruz</option>
                             <option>Cerro Gordo</option>
@@ -97,7 +97,7 @@
                         </select>
                     </div>
                     <div class="col-sm">
-                        <label for="colonia" class="h5 text-white">Colonia</label>
+                        <label for="colonia" class="h5 text-white">Colonia:</label>
                         <select class="form-control" id="colonia">
                             <option>Progreso</option>
                             <option>Centro</option>
@@ -133,17 +133,183 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+            </div>
+            <div class="row">
+                <div class="col-sm">
                     <div class="btn-group btn-group-lg" role="group">
-                        <button class="btn btn-success">
+                        <button class="btn btn-warning">
+                            Historial
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <div class="btn-group btn-group-lg" role="group">
+                        <button class="btn btn-primary text-white">
+                            Reiniciar busqueda 
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="btn-group btn-group-lg" role="group">
+                        <button class="btn btn-success text-white">
                             Buscar
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row" id="pnlTabla">
-            
+        <div class="container-sm text-center" id="pnlTabla">
+            <div class="row">
+                <div class="col-sm">
+                    <p class="h3 text-white">Resultados de la búsqueda</p>
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                        <table class="table table-striped table-dark table-sm table-bordered mb-0">
+                            <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Tamaño</th>
+                                <th scope="col">Valoración</th>
+                                <th scope="col">Detalles</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Cocacola</td>
+                                <td>12.5</td>
+                                <td>600 ml</td>
+                                <td>*****</td>
+                                <td>
+                                    <button class="btn btn-success">VER</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cocacola</td>
+                                <td>13</td>
+                                <td>600 ml</td>
+                                <td>*****</td>
+                                <td>
+                                    <button class="btn btn-success">VER</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cocacola</td>
+                                <td>13</td>
+                                <td>600 ml</td>
+                                <td>*****</td>
+                                <td>
+                                    <button class="btn btn-success">VER</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cocacola</td>
+                                <td>13</td>
+                                <td>600 ml</td>
+                                <td>*****</td>
+                                <td>
+                                    <button class="btn btn-success">VER</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cocacola</td>
+                                <td>13</td>
+                                <td>600 ml</td>
+                                <td>*****</td>
+                                <td>
+                                    <button class="btn btn-success">VER</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cocacola</td>
+                                <td>13</td>
+                                <td>600 ml</td>
+                                <td>*****</td>
+                                <td>
+                                    <button class="btn btn-success">VER</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cocacola</td>
+                                <td>14</td>
+                                <td>600 ml</td>
+                                <td>****</td>
+                                <td>
+                                    <button class="btn btn-success">VER</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cocacola</td>
+                                <td>15</td>
+                                <td>600 ml</td>
+                                <td>***</td>
+                                <td>
+                                    <button class="btn btn-success">VER</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                        
+                        <div class="col-sm">
+                            <div class="btn-toolbar" role="toolbar">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-secondary"><</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-secondary"><<</button>
+                                </div>
+                                <div class="btn-group mr-2" role="group">
+                                  <button type="button" class="btn btn-secondary active">1</button>
+                                  <button type="button" class="btn btn-secondary">2</button>
+                                  <button type="button" class="btn btn-secondary">3</button>
+                                  <button type="button" class="btn btn-secondary">4</button>
+                                  <button type="button" class="btn btn-secondary">5</button>
+                                  <button type="button" class="btn btn-secondary">6</button>
+                                  <button type="button" class="btn btn-secondary">7</button>
+                                  <button type="button" class="btn btn-secondary">8</button>
+                                  <button type="button" class="btn btn-secondary">9</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-secondary">>></button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                  <button type="button" class="btn btn-secondary">></button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-sm">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="row">
+                                <p class="h2 text-white">Cocacola- </p>
+                                <p class="h2 text-white">-600 ml</p>
+                            </div>
+                            <img src="cocacola.jpg" alt="cocacola.png" width="200px" height="200px" class="img-thumbnail mx-auto rounded d-block">
+                        </div>
+                        <div class="col-sm">
+                            <div class="row ">
+                                <p class="h2 text-white">Información</p>
+                            </div>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action disabled">
+                                  Xalapa, Veracruz DD/MM/AAAA HH:MM
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">Precio: $13.5</a>
+                                <a href="#" class="list-group-item list-group-item-action">Tienda: La Esperanza</a>
+                                <a href="#" class="list-group-item list-group-item-action">Colonia: Progreso</a>
+                              </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col"> 
+                        <button class="btn btn-success">
+                            Detalles del producto
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Optional JavaScript -->
