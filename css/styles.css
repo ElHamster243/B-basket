@@ -76,3 +76,67 @@
     .table-wrapper-scroll-y {
     display: block;
     }
+  #logos table{
+    width: 100%;
+    text-align: center;
+  }
+  #logos img.izquierda{
+    float: left;
+  }
+  #logos img.derecha{
+    float: right;
+  }
+  #logos{
+    width: 100%;
+    background-color: #085394;
+  }
+  #index {
+    background-color: #085394;
+  }
+  #info{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    background-color: #009E0F;
+    border: #085394;
+    border-style: double;
+  }
+  #info P{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #info H1{
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #botones{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+  }
+  #botones button img{
+    width: auto;
+    height: 50px;
+    text-align: center;  
+  }
+  #botones button{
+    border: #085394;
+    border-style: double;
+    text-align: center; 
+    background-color: #009E0F;
+    color: white; 
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20%;
+  }
+  #botones button.izquierda{
+    float: left;
+  }
+  #botones button.derecha{
+    float: right;
+  }
+  #botones table{
+    width: 100%;
+    text-align: center;
+  }
