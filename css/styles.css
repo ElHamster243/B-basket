@@ -95,8 +95,10 @@
   }
   #info{
     margin-left: auto;
+    margin-top: 5%;
+    padding: 20px;
     margin-right: auto;
-    max-width: 50%;
+    max-width: 85%;
     background-color: #009E0F;
     border: #085394;
     border-style: double;
@@ -108,12 +110,13 @@
   #info H1{
     text-align: center;
     color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'FuenteUnida';
   }
   #botones{
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%;
+    max-width: 85%;
+    margin-top: 1%;
   }
   #botones button img{
     width: auto;
@@ -128,7 +131,7 @@
     color: white; 
     padding: 10px;
     font-size: 20px;
-    border-radius: 20%;
+    border-radius: 10%;
   }
   #botones button.izquierda{
     float: left;
@@ -139,4 +142,8 @@
   #botones table{
     width: 100%;
     text-align: center;
+  }
+  @font-face{
+    font-family: 'FuenteUnida';
+    src: url('font/titulo.ttf') format("truetype");
   }
