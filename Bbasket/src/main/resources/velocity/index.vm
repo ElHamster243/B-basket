@@ -8,23 +8,23 @@
     <title>Inicio</title>
 </head>
 <body class="bg-secondary">
-    
-       <h2>Bienvenido $comprador.nombres $comprador.apellidos Correo: $comprador.email </h2>
+        
+       <p class="col h1 text-white">$fecha</p>
     
 </ul>
     <div class="container bg-dark text-white ">
         <div class="row">
             <div class="col-sm text-center">
-                <img class="bg-success shadow-lg p-3 mb-5 rounded" alt="Logo" src="img/Logo FEI.png" height="100px"/>
+                <img class="bg-success shadow-lg p-3 mb-5 rounded" alt="Logo" src="assets/img/LogoFEI.png" height="100px"/>
             </div>
             <div class="col-sm text-center">
                 <a href="#">
-                    <img class="rounded-pill bg-success shadow-lg p-3 mb-5 rounded" alt="Logo" src="img/BLogo.png" height="100px" id="UV_logo"/>
+                    <img class="rounded-pill bg-success shadow-lg p-3 mb-5 rounded" alt="Logo" src="assets/img/BLogo.png" height="100px" id="UV_logo"/>
                 </a>
                 
             </div>
             <div class="col-sm text-center">
-                <img class="bg-success shadow-lg p-3 mb-5 rounded" alt="Log" src="img/LogoUV.png" height="100px"/>
+                <img class="bg-success shadow-lg p-3 mb-5 rounded" alt="Log" src="assets/img/LogoUV.png" height="100px"/>
             </div>
         </div>
         <div class="container bg-secondary shadow-lg p-3 mb-5 rounded">
@@ -41,7 +41,7 @@
                 Presiona en el botón BUSCAR para realizar una búsqueda ANÓNIMA.
             </p>
             <p class="text-center h5">
-                Presiona en el botón REGISTRO para crear tu perfil y acceder a TODAS LAS FUNCIONES.
+                Presiona en el botón ACCEDER para crear tu perfil y acceder a TODAS LAS FUNCIONES.
             </p>
         </div>
         
@@ -49,7 +49,7 @@
                         <div class="col-sm">
                             <a  class="text-white" href="busqueda/busqueda.html">
                                 <button  class="btn btn-outline-success btn-lg" >
-                                    <img alt="lupa" src="img/lupa.png" height="20px"> 
+                                    <img alt="lupa" src="assets/img/lupa.png" height="20px"> 
                                     Buscar
                                 </button>
                             </a> 
@@ -57,7 +57,7 @@
                         <div class="col-sm">
                             <a class="text-white" href="acceso/Login.html">
                                 <button class="btn btn-outline-success btn-lg">
-                                    <img alt="candado" src="img/lock.png" height="20px">
+                                    <img alt="candado" src="assets/img/lock.png" height="20px">
                                     Acceder
                                 </button>
                             </a>
