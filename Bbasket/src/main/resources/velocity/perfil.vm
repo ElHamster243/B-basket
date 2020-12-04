@@ -8,7 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Bienvenido, nombre_de_usuario.</title>
+    <title>Bienvenido, $cliente.nombres</title>
+    <script language="javascript" type="text/javascript" src="js/scriptsPerfil.js"></script>
   </head>
   <body>
     <div class="container-sm text-center" id="pnlPrincipal">
@@ -58,44 +59,53 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Nombres</label>
                             <div class="col">
-                                <input class="form-control form-control-lg" type="text" placeholder="$cliente.nombres" disabled>
+                                <input class="form-control form-control-lg" type="text" name="nombre" placeholder="$cliente.nombres" disabled id="txtNombres" onkeypress="return permite(event, 'car')"/>
                             </div>
                             <div class="col-sm-2">
-                                <button type="button" class="btn btn-primary">Editar</button>
+                                <button type="button" class="btn btn-primary" id="btnNombres" onClick="editarTexto('txtNombres', 'btnNombres')">Editar</button>
                             </div>
                             
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Nombres</label>
+                            <label class="col-sm-2 col-form-label">Apellidos</label>
                             <div class="col">
-                                <input class="form-control form-control-lg" type="text" placeholder="$cliente.apellidos" disabled>
+                                <input class="form-control form-control-lg" type="text" name="apellido" placeholder="$cliente.apellidos" disabled id="txtApellidos" onkeypress="return permite(event, 'car')"/>
                             </div>
                             <div class="col-sm-2">
-                                <button type="button" class="btn btn-primary">Editar</button>
+                                <button type="button" class="btn btn-primary" id="btnApellidos" onClick="editarTexto('txtApellidos', 'btnApellidos')">Editar</button>
                             </div>
                             
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Nombres</label>
+                            <label class="col-sm-2 col-form-label">Usuario</label>
                             <div class="col">
-                                <input class="form-control form-control-lg" type="text" placeholder="$cliente.usuario" disabled>
+                                <input class="form-control form-control-lg" type="text" name="nombre de usuario" placeholder="$cliente.usuario" disabled id="txtUsuario"onkeypress="return permite(event, 'car')"/>
                             </div>
                             <div class="col-sm-2">
-                                <button type="button" class="btn btn-primary">Editar</button>
+                                <button type="button" class="btn btn-primary" id="btnUsuario" onClick="editarTexto('txtUsuario', 'btnUsuario')">Editar</button>
                             </div>
                             
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Nombres</label>
+                            <label class="col-sm-2 col-form-label">Correo</label>
                             <div class="col">
-                                <input class="form-control form-control-lg" type="text" placeholder="$cliente.email" disabled>
+                                <input class="form-control form-control-lg" type="email" name="email" placeholder="$cliente.email" disabled id="txtEmail">
                             </div>
                             <div class="col-sm-2">
-                                <button type="button" class="btn btn-primary">Editar</button>
+                                <button type="button" class="btn btn-primary" id="btnEmail" onClick="editarTexto('txtEmail', 'btnEmail')">Editar</button>
                             </div>
                             
                         </div>
-                    
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Contraseña</label>
+                            <div class="col">
+                                <input class="form-control form-control-lg " type="password" name="passwd" placeholder="**********" disabled id="txtPasswd">
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="button" class="btn btn-primary" id="btnPasswd" onClick="editarTexto('txtPasswd', 'btnPasswd')">Editar</button>
+                            </div>
+                            
+                        </div>
                 </div>
             </div>
         </div>

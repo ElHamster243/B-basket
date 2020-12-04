@@ -11,6 +11,7 @@ import java.util.Map;
 
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
+import spark.template.freemarker.FreeMarkerEngine;
 public class App 
 {
     public static void main(String[] args){
@@ -36,6 +37,12 @@ public class App
             modelo.put("fecha", date);
             //modelo.put("comprador", comprador);
             return new ModelAndView(modelo, "velocity/index.vm");
+        }, new VelocityTemplateEngine());
+        get("/acceso", (req, res) ->{
+            Map<String, Object>modelo=new HashMap<>();
+            CompradorDAO aux=new CompradorDAO(0, "Nombres", "Apellidos", "Usuario", "Correo", null, "Contraseña");
+            modelo.put("aux", aux);
+            return new ModelAndView(modelo, "velocity/acceso.vm");
         }, new VelocityTemplateEngine());
         get("/perfil", (req, res)->{
             Map<String, Object> modelo = new HashMap<>();
