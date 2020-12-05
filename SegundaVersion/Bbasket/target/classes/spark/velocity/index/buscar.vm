@@ -1,0 +1,42 @@
+<div class="container shadow-lg p-3 mb-5 rounded" >
+    <div class="container-sm text-center" id="pnlPrincipal">
+        <div class="container-sm text-center" >
+            <div class="container-sm text-center" id="pnlBusqueda">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Escriba el nombre de un producto..." id="producto">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="button" id="buscar">Buscar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="pnlTabla">
+                <div class="col-sm">
+                    <p class="h3 text-white">Resultados de la búsqueda</p>
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                        #parse("spark/velocity/index/tabla.vm")
+                    </div>
+                </div>
+                <div class="col-sm" id="pnlDetalles">
+                    <div class="row">
+                        <div class="col-sm align-middle">
+                            <img src="assets/img/icon.png" alt="foto" width="200px" class="img-thumbnail mx-auto rounded d-block ">
+                        </div>
+                        <div class="col-sm">
+                            <div class="row ">
+                                <p class="h2 text-white">$!oferta.nombre</p>
+                            </div>
+                            <div class="list-group">
+                                <p class="list-group-item bg-secondary">
+                                  Vigencia: $!oferta.fecha
+                                </p>
+                                <p class="list-group-item bg-secondary">Precio: $!oferta.precio</p>
+                                <p class="list-group-item bg-secondary">Tienda: $!oferta.tienda</p>
+                                <p class="list-group-item bg-secondary">Colonia: $!oferta.colonia</p>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
