@@ -33,6 +33,14 @@ public class App
             
             return new ModelAndView(modelo, "spark/velocity/index/index.vm");
         }, new VelocityTemplateEngine());
+
+        get("/vendedor", (req, res) ->{
+            Map<String, Object> modelo = new HashMap<>();
+            modelo.put("vistas", vistas);
+            modelo.put("proyecto", "B-basket");
+            
+            return new ModelAndView(modelo, "spark/velocity/vendedor/indexVendedor.vm");
+        }, new VelocityTemplateEngine());
     }
     
 }
