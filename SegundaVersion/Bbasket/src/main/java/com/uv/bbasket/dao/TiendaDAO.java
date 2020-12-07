@@ -9,28 +9,97 @@ public class TiendaDAO {
     List<Tienda>tiendas=new ArrayList<>();
     private static final String TABLA="tienda";
     //Agregar oferta a la base de datos
-    public void registrarOferta(Tienda t){
+    public void registrarTienda(Tienda t){
         try {
-            String query =  " insert into "+TABLA+
-            " (nombre, entidad_federativa, ciudad, "+
-            "colonia, calle, numero, codigo_postal, tipo, "+
-            "contraseña, id_comprador) values (?, ?, ?, ?, ?, ?, ?, ? ,?, ?, ?)";
+            String query =  " insert into "+TABLA+" (id, nombre, tipo, contraseña, id_comprador) values (0, ?, ?, ?, ?);";
             PreparedStatement preparedStmt = conexion.conectar().prepareStatement(query);
             preparedStmt.setString(1, t.getNombre());
-            preparedStmt.setInt(2, t.getEntidad());
-            preparedStmt.setString(3, t.getCiudad());
-            preparedStmt.setString(4, t.getColonia());
-            preparedStmt.setString(5, t.getCalle());
-            preparedStmt.setString(6, t.getNumero());
-            preparedStmt.setString(7, t.getCoPo());
-            preparedStmt.setInt(8, t.getTipo());
-            preparedStmt.setString(9, t.getPasswd());
-            preparedStmt.setInt(10, t.getComprador());
+            preparedStmt.setInt(2, t.getTipo());
+            preparedStmt.setString(3, t.getPasswd());
+            preparedStmt.setInt(4, t.getComprador());
+            preparedStmt.execute();
+        } catch (SQLException sqlException) {
+            System.out.println("Estado SQL: "+sqlException.getSQLState());
+            System.out.println("Código de error: "+sqlException.getErrorCode());
+            System.out.println(sqlException.getMessage());
+            System.out.println(sqlException.getSQLState());
+        }
+    }
+    public void bajaTiendaById(Tienda c){
+        String query = "delete from "+TABLA+" where id = ?;";
+        try {
+            PreparedStatement preparedStmt = conexion.conectar().prepareStatement(query);
+            preparedStmt.setInt(1, c.getId());
             preparedStmt.execute();
         } catch (SQLException sqlException) {
             System.out.println("Estado SQL: "+sqlException.getSQLState());
             System.out.println("Código de error: "+sqlException.getErrorCode());
             System.out.println(sqlException.getMessage());
         }
+    }
+    public void cambiarNombre(Tienda t, String nombre){
+        String query = "update "+TABLA+" set nombre = ? where id = ?;";
+        try {
+            PreparedStatement preparedStmt = conexion.conectar().prepareStatement(query);
+            preparedStmt.setString(1, nombre);
+            preparedStmt.setInt(2, t.getId());
+            preparedStmt.executeUpdate();
+        } catch (SQLException sqlException) {
+            System.out.println("Estado SQL: "+sqlException.getSQLState());
+            System.out.println("Código de error: "+sqlException.getErrorCode());
+            System.out.println(sqlException.getMessage());
+        }
+    }
+    public void cambiarTipo(Tienda t){
+        String query = "update "+TABLA+" set tipo = ? where id = ?;";
+        try {
+            PreparedStatement preparedStmt = conexion.conectar().prepareStatement(query);
+            preparedStmt.setInt(1, t.getTipo());
+            preparedStmt.setInt(2, t.getId());
+            preparedStmt.executeUpdate();
+        } catch (SQLException sqlException) {
+            System.out.println("Estado SQL: "+sqlException.getSQLState());
+            System.out.println("Código de error: "+sqlException.getErrorCode());
+            System.out.println(sqlException.getMessage());
+        }
+    }
+    public void cambiarPasswd(Tienda t){
+        String query = "update "+TABLA+" set contraseña = ? where id = ?;";
+        try {
+            PreparedStatement preparedStmt = conexion.conectar().prepareStatement(query);
+            preparedStmt.setString(1, t.getPasswd());
+            preparedStmt.setInt(2, t.getId());
+            preparedStmt.executeUpdate();
+        } catch (SQLException sqlException) {
+            System.out.println("Estado SQL: "+sqlException.getSQLState());
+            System.out.println("Código de error: "+sqlException.getErrorCode());
+            System.out.println(sqlException.getMessage());
+        }
+    }
+    public Tienda loggeoTienda(int id, String passwd){
+        Tienda aux=null;
+
+        String select = "select * from tienda where tienda.id='"+id+"' and comprador.contraseña='"+passwd+"';";
+        Statement stmt;
+        try {
+            stmt=conexion.conectar().createStatement();
+            ResultSet rs=stmt.executeQuery(select);
+            if(!rs.next()){
+                System.out.println("\nSin coincidencias registradas en la base de datos.");
+                System.out.println("\nVerificar contraseña o usuario.");
+            }
+                
+                String nombre=rs.getString("nombre");
+                int tipo=rs.getInt("tipo");
+                String usuario=rs.getString("contraseña");
+                int comprador=rs.getInt("id_comprador");
+                aux=new Tienda(id, nombre, tipo, usuario, comprador);
+                System.out.println(aux.toString());
+            
+        } catch (Exception sqlException) {
+            System.out.println(sqlException.getMessage());
+        }
+        
+        return aux;
     }
 }

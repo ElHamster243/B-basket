@@ -127,7 +127,7 @@ public class CompradorDAO {
             if(!rs.next()){
                 System.out.println("\nSin coincidencias registradas en la base de datos.");
                 System.out.println("\nVerificar contraseña o usuario.");
-            };
+            }
                 int id=rs.getInt("id");
                 String nombres=rs.getString("nombres");
                 String apellidos=rs.getString("apellidos");
@@ -152,7 +152,7 @@ public class CompradorDAO {
             ResultSet rs=stmt.executeQuery("select * from "+TABLA);
             if(!rs.next()){
                 System.out.println("\nSin compradores registrados en la base de datos.");
-            };
+            }
             while(rs.next()){
                 int id=rs.getInt("id");
                 String nombres=rs.getString("nombres");
