@@ -1,0 +1,22 @@
+<div class="container shadow-lg p-3 mb-5 rounded" >
+    <div class="container-sm text-center" id="pnlPrincipal">
+        <div class="container-sm text-center" >
+            <div class="container-sm text-center" id="pnlBusqueda">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Escriba el nombre de un producto..." id="producto">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="button" id="buscar">Buscar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="pnlTabla">
+                <div class="col-sm">
+                    <p class="h3 text-white">Resultados de la búsqueda</p>
+                    <div class="bg-white">
+                        #parse("spark/velocity/index/tabla.vm")
+                    </div>
+                </div>
+                #parse("spark/velocity/index/detalles.vm")
+        </div>
+    </div>
+</div>
