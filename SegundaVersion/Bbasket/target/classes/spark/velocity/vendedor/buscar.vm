@@ -8,6 +8,28 @@
                         <button class="btn btn-outline-primary" type="button" id="buscar">Buscar</button>
                     </div>
                 </div>
+                <div class="input-group mb-3">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Estado
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">$estados.estado1</a>
+                            <a class="dropdown-item" href="#">$estados.estado2</a>
+                            <a class="dropdown-item" href="#">$estados.estado3</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Colonia
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">$colonias.colonia1</a>
+                            <a class="dropdown-item" href="#">$colonias.colonia2</a>
+                            <a class="dropdown-item" href="#">$colonias.colonia3</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row" id="pnlTabla">
                 <div class="col-sm">
@@ -26,9 +48,7 @@
                                 <p class="h2 text-white">$!oferta.nombre</p>
                             </div>
                             <div class="list-group">
-                                <p class="list-group-item bg-secondary">
-                                  Vigencia: $!oferta.fecha
-                                </p>
+                                <p class="list-group-item bg-secondary">Vigencia: $!oferta.fecha</p>
                                 <p class="list-group-item bg-secondary">Precio: $!oferta.precio</p>
                                 <p class="list-group-item bg-secondary">Tienda: $!oferta.tienda</p>
                                 <p class="list-group-item bg-secondary">Colonia: $!oferta.colonia</p>

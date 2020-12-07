@@ -17,10 +17,6 @@
         <a class="nav-link" href="#vendedor">Vendedor</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-1">
-      <input class="form-control mr-sm-2" type="text" placeholder="Usuario" aria-label="Search">
-      <input class="form-control mr-sm-2" type="password" placeholder="Contraseña" aria-label="Search">
-      <button class="btn btn-danger btn-outline-success my-2 my-sm-0" type="submit">Cerrar sesión</button>
-    </form>
+      <button class="btn btn-danger btn-outline my-2 my-sm-0" type="submit">Cerrar sesión</button>
   </div>
 </nav>

@@ -14,22 +14,22 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body class="text-white">
-        #parse("spark/velocity/index/navegacion.vm")
+        #parse("spark/velocity/vendedor/navegacion.vm")
         <div class="container bg-dark">
             <br id="perfil">            
             <br>
             <h1 class="display-1">Perfil</h1>
-            #parse("spark/velocity/index/mision.vm")
+            #parse("spark/velocity/vendedor/perfil.vm")
             <br id="buscar">
             <br>
             <br>
             <h1 class="display-1">Buscar</h1>
-            #parse("spark/velocity/index/buscar.vm")
+            #parse("spark/velocity/vendedor/buscar.vm")
             <br id="Vendedor">
             <br>
             <br>
             <h1 class="display-1">Vendedor</h1>
-            #parse("spark/velocity/index/vendedor.vm")
+            #parse("spark/velocity/vendedor/vendedor.vm")
         </div>
     </body>
 </html>

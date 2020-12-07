@@ -1,0 +1,36 @@
+</br>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <label for="nombre_new">$Nombre</label>
+            <input type="text" class="form-control" id="nombre_new">
+            <label for="tipo_new">$Tipo</label>
+            <input type="text" class="form-control" id="tipo_new">
+            <label for="estado_new">$Estado</label>
+            <input type="text" class="form-control" id="estado_new">
+            <label for="ciudad_new">$Ciudad</label>
+            <input type="text" class="form-control" id="ciudad_new">
+        </div>
+        <div class="col-6">
+            <label for="colonia_new">$Colonia</label>
+            <input type="text" class="form-control" id="colonia_new">
+            <label for="calle_new">$Calle</label>
+            <input type="text" class="form-control" id="calle_new">
+            <label for="cp_new">$Codigo postal</label>
+            <input type="text" class="form-control" id="cp_new">
+            <label for="numero_new">$Numero</label>
+            <input type="text" class="form-control" id="numero_new">
+        </div>
+    </div>
+</div>
+</br>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4738.47836324846!2d-96.88955378995604!3d19.50152585862321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db324669fcae3b%3A0xb6b000297542bd5c!2sOXXO%20Lomas%20Verdes!5e0!3m2!1ses!2smx!4v1607318146073!5m2!1ses!2smx" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>        
+        </div>
+        <div class="col-6">
+            <img style="width:50%;" src="http://lorempixel.com/500/200">
+        </div>
+    </div>
+</div>

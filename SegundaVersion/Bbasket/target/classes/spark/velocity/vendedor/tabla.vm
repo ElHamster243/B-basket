@@ -5,6 +5,7 @@
             <td>$vista.getNombre()</td>
             <td>$vista.getPrecio()</td>
             <td>$vista.getTamanio()</td>
+            <td>Validacion de imagen</td>
         </tr>
     #end
 </table>

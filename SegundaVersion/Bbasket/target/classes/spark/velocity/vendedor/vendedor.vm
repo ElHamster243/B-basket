@@ -1,0 +1,18 @@
+#parse("spark/velocity/vendedor/navegacionint.vm")
+        <div class="container bg-dark">
+            <br id="mititenda">            
+            <br>
+            <h1 class="display">Mi tienda</h1>
+            <button class="btn btn-secondary btn-outline my-2 my-sm-0" type="submit">Editar</button>
+            #parse("spark/velocity/vendedor/mitienda.vm")
+            <br id="productos">
+            <br>
+            <br>
+            <h1 class="display">Productos</h1>
+            #parse("spark/velocity/vendedor/productos.vm")
+            <br id="ofertas">
+            <br>
+            <br>
+            <h1 class="display">Ofertas</h1>
+            #parse("spark/velocity/vendedor/tabla.vm")
+        </div>

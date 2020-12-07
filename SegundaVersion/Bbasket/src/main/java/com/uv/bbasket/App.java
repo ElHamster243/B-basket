@@ -39,7 +39,7 @@ public class App
             modelo.put("vistas", vistas);
             modelo.put("proyecto", "B-basket");
             
-            return new ModelAndView(modelo, "spark/velocity/vendedor/indexVendedor.vm");
+            return new ModelAndView(modelo, "spark/velocity/vendedor/index.vm");
         }, new VelocityTemplateEngine());
     }
     
