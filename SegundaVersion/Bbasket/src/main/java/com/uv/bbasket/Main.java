@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.uv.bbasket.dao.CompradorDAO;
+import com.uv.bbasket.model.Comprador;
 import com.uv.bbasket.model.Vista;
 
 import static spark.Spark.*;
@@ -41,6 +43,17 @@ public class Main
             
             return new ModelAndView(modelo, "spark/velocity/index/index.vm");
         }, new VelocityTemplateEngine());
+        get("/comprador", (req, res) ->{
+            Map<String, Object> modelo = new HashMap<>();
+            modelo.put("vistas", v);
+            CompradorDAO cDao=new CompradorDAO();
+            Comprador cliente = cDao.usuarioPasswd("lizardi", "123456");
+            modelo.put("u", cliente);
+            modelo.put("proyecto", "B-basket");
+            
+            return new ModelAndView(modelo, "spark/velocity/comprador/index.vm");
+        }, new VelocityTemplateEngine());
+
 
     }
     

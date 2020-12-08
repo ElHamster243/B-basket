@@ -116,10 +116,10 @@ public class CompradorDAO {
         }
     }
     //Verificar usuario->contraseña 
-    public Comprador usuarioPasswd(Comprador c, String passwd){
+    public Comprador usuarioPasswd(String u, String passwd){
         Comprador aux=null;
 
-        String select = "select * from comprador where comprador.usuario='"+c.getUsuario()+"' and comprador.contraseña='"+passwd+"';";
+        String select = "select * from comprador where comprador.usuario='"+u+"' and comprador.contraseña='"+passwd+"';";
         Statement stmt;
         try {
             stmt=conexion.conectar().createStatement();
