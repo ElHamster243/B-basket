@@ -25,10 +25,10 @@
         <!-- Contenedor principal -->
         <div class="container bg-dark">
             <!-- Sección 'misión' -->
-            <div class="container-fluid bg-secondary">
+            <div class="container-fluid bg-secondary" id="misionDiv">
                 <!-- Marcador a sección 'misión' -->
                 <br id="mision">            
-                <br>
+                <hr>
                 <h1 class="display-2">Misión</h1>
                 <!-- Vm 'misión'-->
                 #parse("spark/velocity/index/mision.vm")
@@ -39,6 +39,8 @@
                 <br id="buscar">
                 <br>
                 <br>
+                <br>
+                <hr>              
                 <h1 class="display-1">Búsqueda anónima</h1>
                 <!-- Sección 'Buscar'-->
                 #parse("spark/velocity/index/buscar.vm")
@@ -48,7 +50,7 @@
                 <!-- Marcador a sección 'registro' -->
                 <br id="registro">
                 <br>
-                <br>
+                <hr>
                 <h1 class="display-1">Registro</h1>
                 <!-- Sección 'registro'-->
                 #parse("spark/velocity/index/registro.vm")
