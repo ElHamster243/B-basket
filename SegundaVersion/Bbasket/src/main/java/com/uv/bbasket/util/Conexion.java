@@ -6,9 +6,7 @@ public class Conexion {
     public Connection conectar(){
         Connection connection=null;
         try {
-            connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/bbasket_bd?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "root", ""
-                );
+            connection = DriverManager.getConnection("jdbc:mysql://db4free.net/bbasket_db?user=bbasketadmin&password=sist3m4sW3bzozo");
         }catch(SQLException ex){
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
@@ -17,9 +15,8 @@ public class Conexion {
         if(connection==null){
             System.out.println("Conexión fallida.");
         }else{
-            System.out.print("Conexión establecida.");
+            System.out.println("Conexión establecida.");
         }
         return connection;
-
     }
 }
