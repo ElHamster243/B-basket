@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>Ingresa los datos de tu tienda</h2>
+  <form class="form">
+    <div class="row">
+      <div class="col-6">
+        <label for="nombre_new">Nombre de la tienda</label>
+        <input type="text" class="form-control" id="nombre_new">
+        <label for="tipo_new">Tipo de tienda</label>
+        <input type="text" class="form-control" id="tipo_new">
+        <label for="contrasenia_new">Contraseña</label>
+        <input type="text" class="form-control" id="contrasenia_new">
+        <label for="codigopos_new">Codigo postal</label>
+        <input type="text" class="form-control" id="codigopos_new">
+      </div>
+      <div class="col-6">
+        <label for="medida_new">Estado</label>
+          <select class="form-control">
+            <option>Estado1</option>
+            <option>Estado2</option>
+            <option>Estado3</option>
+          </select>
+        <label for="medida_new">Ciudad</label>
+          <select class="form-control">
+            <option>Ciudad1</option>
+            <option>Ciudad2</option>
+            <option>Ciudad3</option>
+          </select>
+        <label for="colonia_new">$Colonia</label>
+        <input type="text" class="form-control" id="colonia_new">
+        <label for="calle_new">$Calle</label>
+        <input type="text" class="form-control" id="calle_new">
+        <label for="numero_new">$Numero</label>
+        <input type="text" class="form-control" id="numero_new">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="checkbox">
+          <label style="text-align:center;"><input type="checkbox" value="">Aceptar términos y condiciones</label>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <hr class="mt-3 mb-3" style="height:2px;border-width:0;color:gray;background-color:gray" />
+    <br/>
+    <button class="btn btn-outline-secondary" type="button" id="anadir">Añadir tienda</button>
+  </form>
+</div>
+<br/>
+</div>

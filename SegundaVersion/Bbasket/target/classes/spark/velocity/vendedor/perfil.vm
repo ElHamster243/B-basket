@@ -2,47 +2,47 @@
   <h1 class="display-5">Bienvenido $usuario</h1>
   <div class="container">
     <div class="col-sm" id="pnlDetalles">
-                    <div class="row">
-                        <div class="col-sm align-middle">
-                            <img src="assets/img/$fotodelperfil" alt="foto" width="200px" class="img-thumbnail mx-auto rounded d-block ">
-                        </div>
-                        <div class="col-sm">
-                            <div class="list-group">
-                                <p class="list-group-item bg-secondary">Nombre: $!usuario.nombre</p>
-                                <p class="list-group-item bg-secondary">Usuario: $!usuario.username</p>
-                                <p class="list-group-item bg-secondary">Correo: $!usuario.correo</p>
-                              </div>
-                        </div>
-                        <div class="container">
-                          <h1>Ofertas destacadas</h1>
-                          <div class="row mb-3">
-                            <div class="col">
-                              <div>
-                                <img style="width:100px;" src="http://lorempixel.com/500/200">
-                              </div>
-                              <div>
-                                <button class="btn">$ofertas.oferta1</button>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div>
-                                <img style="width:100px;" src="http://lorempixel.com/500/200">
-                              </div>
-                              <div>
-                                <button class="btn">$ofertas.oferta2</button>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div  id="lube" >
-                                <img style="width:100px;" src="http://lorempixel.com/500/200">
-                              </div>
-                              <div>
-                                <button class="btn">$ofertas.oferta3</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="col-sm align-middle">
+          <img src="assets/img/$fotodelperfil" alt="foto" width="200px" class="img-thumbnail mx-auto rounded d-block ">
+        </div>
+        <div class="col-sm">
+          <div class="list-group">
+            <p class="list-group-item bg-secondary">Nombre: $!usuario.nombre</p>
+            <p class="list-group-item bg-secondary">Usuario: $!usuario.username</p>
+            <p class="list-group-item bg-secondary">Correo: $!usuario.correo</p>
+          </div>
+        </div>
+        <div class="container">
+          <h1>Ofertas destacadas</h1>
+          <div class="row mb-3">
+            <div class="col">
+              <div>
+                <img style="width:100px;" src="http://lorempixel.com/500/200">
+              </div>
+              <div>
+                <button class="btn">$ofertas.oferta1</button>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <img style="width:100px;" src="http://lorempixel.com/500/200">
+              </div>
+              <div>
+                <button class="btn">$ofertas.oferta2</button>
+              </div>
+            </div>
+            <div class="col">
+              <div  id="lube" >
+                <img style="width:100px;" src="http://lorempixel.com/500/200">
+              </div>
+              <div>
+                <button class="btn">$ofertas.oferta3</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

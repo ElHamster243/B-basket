@@ -1,0 +1,36 @@
+<div class="container shadow-lg p-3 mb-5 rounded" >
+    <div class="container-sm text-center" id="pnlPrincipal">
+        <div class="container-sm text-center" >
+            <h1 style="text-align:center;">Agregar una oferta</h1>
+            <div class="container-sm text-center" id="pnloferta">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Escriba el id de el producto..." id="producto">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="button" id="buscar">Buscar</button>
+                    </div>
+                </div>
+                <div class="container">
+                    <h1>Agregar los datos de la oferta</h1>
+                    <div class="row">
+                        <div class="col">
+                            <form class="form">
+                                <label for="nombre_new">Nombre</label>
+                                <input type="text" class="form-control" id="nombre_new" value="$Nombre">
+                                <label for="tamanio_new">Tamaño</label>
+                                <input type="text" class="form-control" id="tamanio_new" value="$Tamaño">
+                                <label for="precio_new">Precio</label>
+                                <input type="text" class="form-control" id="precio_new" value="$Precio">
+                                <label for="precio_new">Descuento %</label>
+                                <input type="text" class="form-control" id="descuento_new" value="$Descuento">
+                                <br/>
+                                <hr class="mt-3 mb-3" style="height:2px;border-width:0;color:gray;background-color:gray" />
+                                <br/>
+                                <button class="btn btn-outline-secondary" type="button" id="anadir">Añadir oferta</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

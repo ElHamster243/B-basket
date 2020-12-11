@@ -1,5 +1,6 @@
 </br>
 <div class="container">
+<button class="btn btn-secondary btn-outline my-2 my-sm-0" type="submit">Editar</button>
     <div class="row">
         <div class="col-6">
             <label for="nombre_new">$Nombre</label>

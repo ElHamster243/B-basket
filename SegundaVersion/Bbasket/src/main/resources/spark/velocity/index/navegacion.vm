@@ -1,11 +1,14 @@
 <!-- Barra de navegación de la página 'index'-->
 <!-- Es fija, abarca todo el ancho de la pantalla, esta puesta en la parte superior, el background 'secondary'-->
 <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top " id="navBar">
-  <!-- Brand obtenido del motor Velocity-->
-  <a class="navbar-brand text-light">${proyecto}</a>
+  <!-- Brand obtenido del motor Velocity y implementación de navegación-->
+  <a class="navbar-brand" href="#">$proyecto</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   <!-- Lista de secciones del documento -->
-  <div class="collapse navbar-collapse" id="nav">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
       <!-- Enlace a la sección 'misión' -->
       <li class="nav-item">
         <a class="nav-link text-light" href="#mision">Misión</a>
@@ -20,8 +23,6 @@
       </li>
     </ul>
     <!-- Sección de incio de sesión -->
-    <div>
       #parse("spark/velocity/index/login.vm")
-    </div>
   </div>
 </nav>
