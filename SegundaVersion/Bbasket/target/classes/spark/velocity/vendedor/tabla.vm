@@ -1,11 +1,22 @@
-<table class="table table-striped table-dark table-hover table-bordered mb-0">
-    #foreach( $vista in $vistas )
+<table class="table table-striped table-dark table-hover table-bordered" id="tabla_busqueda_anonima">
+    <tr>
+        <th data-toggle="tooltip" data-placement="top" title="ID del producto">No.</th>
+        <th data-toggle="tooltip" data-placement="top" title="Nombre del producto">Producto</th>
+        <th data-toggle="tooltip" data-placement="top" title="Tamaño del producto">Tamaño</th>
+        <th data-toggle="tooltip" data-placement="top" title="Precio del producto">Precio</th>
+        <th data-toggle="tooltip" data-placement="top" title="Colonia donde se encuentra la tienda">Colonia</th>
+        <th data-toggle="tooltip" data-placement="top" title="Nombre de la tienda">Tienda</th>
+    </tr>
+    #foreach( $v in $vista )
+        
         <tr>
-            <td>$vista.getId()</td>
-            <td>$vista.getNombre()</td>
-            <td>$vista.getPrecio()</td>
-            <td>$vista.getTamanio()</td>
-            <td>Validacion de imagen</td>
+            <td data-toggle="tooltip" data-placement="top" title="ID del producto">$v.getId()</td>
+            <td data-toggle="tooltip" data-placement="top" title="Nombre del producto">$v.getProducto()</td>
+            <td data-toggle="tooltip" data-placement="top" title="Tamaño del producto">$v.getTamano()</td>
+            <td data-toggle="tooltip" data-placement="top" title="Precio del producto">$v.getPrecio()</td>
+            <td data-toggle="tooltip" data-placement="top" title="Colonia donde se encuentra la tienda">$v.getColonia()</td>
+            <td data-toggle="tooltip" data-placement="top" title="Nombre de la tienda">$v.getTiendaNombre()</td>
         </tr>
+        
     #end
-</table>
+</table>         

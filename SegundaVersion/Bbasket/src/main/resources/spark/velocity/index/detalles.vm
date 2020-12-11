@@ -1,19 +1,19 @@
 <div class="col-sm" id="pnlDetalles">
                     <div class="row">
-                        <div class="col-sm align-middle img-thumbnail mx-auto rounded d-block " id="foto_producto">
+                        <div class="col-sm align-middle img-thumbnail mx-auto rounded d-block " id="foto_producto"  data-toggle="tooltip" data-placement="top" title="Imágen del producto">
                             
                         </div>
                         <div class="col-sm">
                             <div class="row ">
-                                <p class="h2 text-white">$!oferta.nombre</p>
+                                <p class="h2 text-white" data-toggle="tooltip" data-placement="top" title="Nombre de la oferta">$!oferta.nombre</p>
                             </div>
                             <div class="list-group">
-                                <p class="list-group-item bg-secondary">
+                                <p class="list-group-item bg-secondary" data-toggle="tooltip" data-placement="top" title="Vigencia del producto">
                                   Vigencia: $!oferta.fecha
                                 </p>
-                                <p class="list-group-item bg-secondary">Precio: $!oferta.precio</p>
-                                <p class="list-group-item bg-secondary">Tienda: $!oferta.tienda</p>
-                                <p class="list-group-item bg-secondary">Colonia: $!oferta.colonia</p>
+                                <p class="list-group-item bg-secondary" data-toggle="tooltip" data-placement="top" title="Precio del producto">Precio: $!oferta.precio</p>
+                                <p class="list-group-item bg-secondary" data-toggle="tooltip" data-placement="top" title="Nombre de la tienda">Tienda: $!oferta.tienda</p>
+                                <p class="list-group-item bg-secondary" data-toggle="tooltip" data-placement="top" title="Colonia en donde se ubica la tienda">Colonia: $!oferta.colonia</p>
                               </div>
                         </div>
                     </div>

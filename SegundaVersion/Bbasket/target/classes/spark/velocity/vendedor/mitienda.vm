@@ -1,26 +1,26 @@
 </br>
 <div class="container">
-<button class="btn btn-secondary btn-outline my-2 my-sm-0" type="submit">Editar</button>
+<button class="btn btn-secondary btn-outline my-2 my-sm-0" type="submit"  data-toggle="tooltip" data-placement="top" title="Botón para poder editar la información de la tienda">Editar</button>
     <div class="row">
         <div class="col-6">
-            <label for="nombre_new">$Nombre</label>
-            <input type="text" class="form-control" id="nombre_new">
-            <label for="tipo_new">$Tipo</label>
-            <input type="text" class="form-control" id="tipo_new">
-            <label for="estado_new">$Estado</label>
-            <input type="text" class="form-control" id="estado_new">
-            <label for="ciudad_new">$Ciudad</label>
-            <input type="text" class="form-control" id="ciudad_new">
+            <label for="nombre_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input nombre">$Nombre</label>
+            <input type="text" class="form-control" id="nombre_new" data-toggle="tooltip" data-placement="top" title="Nombre de la tienda">
+            <label for="tipo_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input tipo">$Tipo</label>
+            <input type="text" class="form-control" id="tipo_new" data-toggle="tooltip" data-placement="top" title="Tipo de tienda">
+            <label for="estado_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input estado">$Estado</label>
+            <input type="text" class="form-control" id="estado_new" data-toggle="tooltip" data-placement="top" title="Estado donde se ubica la tienda">
+            <label for="ciudad_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input ciudad">$Ciudad</label>
+            <input type="text" class="form-control" id="ciudad_new" data-toggle="tooltip" data-placement="top" title="Ciudad donde se ubica la tienda">
         </div>
         <div class="col-6">
-            <label for="colonia_new">$Colonia</label>
-            <input type="text" class="form-control" id="colonia_new">
-            <label for="calle_new">$Calle</label>
-            <input type="text" class="form-control" id="calle_new">
-            <label for="cp_new">$Codigo postal</label>
-            <input type="text" class="form-control" id="cp_new">
-            <label for="numero_new">$Numero</label>
-            <input type="text" class="form-control" id="numero_new">
+            <label for="colonia_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input colonia">$Colonia</label>
+            <input type="text" class="form-control" id="colonia_new" data-toggle="tooltip" data-placement="top" title="Colonia donde se ubica la tienda">
+            <label for="calle_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input calle">$Calle</label>
+            <input type="text" class="form-control" id="calle_new" data-toggle="tooltip" data-placement="top" title="Calle donde se ubica la tienda">
+            <label for="cp_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input código postal">$Codigo postal</label>
+            <input type="text" class="form-control" id="cp_new" data-toggle="tooltip" data-placement="top" title="Código postal de la tienda">
+            <label for="numero_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input número">$Numero</label>
+            <input type="text" class="form-control" id="numero_new" data-toggle="tooltip" data-placement="top" title="Número domiciliario de la tienda">
         </div>
     </div>
 </div>
@@ -28,10 +28,10 @@
 <div class="container">
     <div class="row">
         <div class="col-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4738.47836324846!2d-96.88955378995604!3d19.50152585862321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db324669fcae3b%3A0xb6b000297542bd5c!2sOXXO%20Lomas%20Verdes!5e0!3m2!1ses!2smx!4v1607318146073!5m2!1ses!2smx" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4738.47836324846!2d-96.88955378995604!3d19.50152585862321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db324669fcae3b%3A0xb6b000297542bd5c!2sOXXO%20Lomas%20Verdes!5e0!3m2!1ses!2smx!4v1607318146073!5m2!1ses!2smx" width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"  data-toggle="tooltip" data-placement="top" title="Mapa de la ubicación del negocio"></iframe>        
         </div>
         <div class="col-6">
-            <img style="width:50%;" src="http://lorempixel.com/500/200">
+            <img style="width:50%;" src="https://www.coca-colaentuhogar.com/media/catalog/product/cache/9fb819452282e0f6131d8f060ad13229/5/0/500ml_4.png" data-toggle="tooltip" data-placement="top" title="Imágen de la tienda">
         </div>
     </div>
 </div>

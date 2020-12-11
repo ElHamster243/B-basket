@@ -1,29 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top">
-  <a class="navbar-brand" href="#">$proyecto</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#" data-toggle="tooltip" data-placement="top" title="Nombre de B-basket">$proyecto</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-toggle="tooltip" data-placement="top" title="Botón de navegación">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#perfil">Perfil</a>
+        <a class="nav-link" href="#perfil" data-toggle="tooltip" data-placement="top" title="Botón con destino al apartado perfil">Perfil</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#buscar">Buscar</a>
+        <a class="nav-link" href="#buscar" data-toggle="tooltip" data-placement="top" title="Botón con destino al apartado buscar">Buscar</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-toggle="tooltip" data-placement="top" title="Botones con destino a apartados del área vendedor">
           Vendedor
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="nav-link" href="#mitienda">Mi tienda</a>
-          <a class="nav-link" href="#productos">Productos</a>
-          <a class="nav-link" href="#ofertas">Ofertas</a>
+          <a class="nav-link" href="#mitienda" data-toggle="tooltip" data-placement="top" title="Botón con destino al apartado mi tienda en vendedor">Mi tienda</a>
+          <a class="nav-link" href="#productos" data-toggle="tooltip" data-placement="top" title="Botón con destino al apartado productos en vendedor">Productos</a>
+          <a class="nav-link" href="#ofertas" data-toggle="tooltip" data-placement="top" title="Botón con destino al apartado ofertas en vendedor">Ofertas</a>
         </div>
       </li>
     </ul>
   </div>
   <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-danger btn-outline-danger my-2 my-sm-0" type="submit">Cerrar sesión</button>
+      <button class="btn btn-danger btn-outline-danger my-2 my-sm-0" type="submit"  data-toggle="tooltip" data-placement="top" title="Da click para cerrar tu sesión">Cerrar sesión</button>
     </form>
 </nav>

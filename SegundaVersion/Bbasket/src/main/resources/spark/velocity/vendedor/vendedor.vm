@@ -1,19 +1,19 @@
        <div class="container bg-dark">
-            <hr class="mt-3 mb-3" style="height:2px;border-width:0;color:gray;background-color:gray" />
+            <hr class="mt-3 mb-3" style="height:2px;border-width:0;color:gray;background-color:gray" data-toggle="tooltip" data-placement="top" title="División de área"/>
             <br id="mitienda">            
             <br>
-            <h1 class="display">Mi tienda</h1>
+            <h1 class="display" data-toggle="tooltip" data-placement="top" title="Sub-área mi tienda">Mi tienda</h1>
             #parse("spark/velocity/vendedor/mitienda.vm")
             <br id="productos">
             <br>
-            <hr class="mt-3 mb-3" style="height:2px;border-width:0;color:gray;background-color:gray" />
+            <hr class="mt-3 mb-3" style="height:2px;border-width:0;color:gray;background-color:gray" data-toggle="tooltip" data-placement="top" title="División de área"/>
             <br>
-            <h1 class="display">Productos</h1>
+            <h1 class="display" data-toggle="tooltip" data-placement="top" title="Sub-área productos">Productos</h1>
             #parse("spark/velocity/vendedor/productos.vm")
             <br id="ofertas">
             <br>
-            <hr class="mt-3 mb-3" style="height:2px;border-width:0;color:gray;background-color:gray" />
+            <hr class="mt-3 mb-3" style="height:2px;border-width:0;color:gray;background-color:gray" data-toggle="tooltip" data-placement="top" title="División de área"/>
             <br>
-            <h1 class="display">Ofertas</h1>
+            <h1 class="display" data-toggle="tooltip" data-placement="top" title="Sub-área ofertas">Ofertas</h1>
             #parse("spark/velocity/vendedor/ofertas.vm")
         </div>

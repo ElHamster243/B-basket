@@ -3,55 +3,55 @@
         <div class="container-sm text-center" >
             <div class="container-sm text-center" id="pnlBusqueda">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Escriba el nombre de un producto..." id="producto">
+                    <input type="text" class="form-control" placeholder="Escriba el nombre de un producto..." id="producto" data-toggle="tooltip" data-placement="top" title="Ingresa el nombre del producto a buscar">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button" id="buscar">Buscar</button>
+                        <button class="btn btn-outline-primary" type="button" id="buscar" data-toggle="tooltip" data-placement="top" title="Da click para buscar el producto">Buscar</button>
                     </div>
                 </div>
                 <div class="input-group mb-3">
                     <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  data-toggle="tooltip" data-placement="top" title="Da click y selecciona un estado de la lista">
                             Estado
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">$estados.estado1</a>
-                            <a class="dropdown-item" href="#">$estados.estado2</a>
-                            <a class="dropdown-item" href="#">$estados.estado3</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Primera opción de estado">$estados.estado1</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Segunda opción de estado">$estados.estado2</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="tercera opción de estado">$estados.estado3</a>
                         </div>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  data-toggle="tooltip" data-placement="top" title="Da click y selecciona una colonia de la lista">
                             Colonia
                         </button>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">$colonias.colonia1</a>
-                            <a class="dropdown-item" href="#">$colonias.colonia2</a>
-                            <a class="dropdown-item" href="#">$colonias.colonia3</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Primera opción de colonia">$colonias.colonia1</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Segunda opción de colonia">$colonias.colonia2</a>
+                            <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Tercera opción de colonia">$colonias.colonia3</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row" id="pnlTabla">
                 <div class="col-sm">
-                    <p class="h3 text-white">Resultados de la búsqueda</p>
+                    <p class="h3 text-white"  data-toggle="tooltip" data-placement="top" title="Área de los resultados de la búsqueda">Resultados de la búsqueda</p>
                     <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                        #parse("spark/velocity/index/tabla.vm")
+                        #parse("spark/velocity/vendedor/tabla.vm")
                     </div>
                 </div>
                 <div class="col-sm" id="pnlDetalles">
                     <div class="row">
                         <div class="col-sm align-middle">
-                            <img src="assets/img/icon.png" alt="foto" width="200px" class="img-thumbnail mx-auto rounded d-block ">
+                            <img src="assets/img/icon.png" alt="foto" width="200px" class="img-thumbnail mx-auto rounded d-block " data-toggle="tooltip" data-placement="top" title="Imágen del producto">
                         </div>
                         <div class="col-sm">
                             <div class="row ">
-                                <p class="h2 text-white">$!oferta.nombre</p>
+                                <p class="h2 text-white" data-toggle="tooltip" data-placement="top" title="Nombre del producto en oferta">$!oferta.nombre</p>
                             </div>
                             <div class="list-group">
-                                <p class="list-group-item bg-secondary">Vigencia: $!oferta.fecha</p>
-                                <p class="list-group-item bg-secondary">Precio: $!oferta.precio</p>
-                                <p class="list-group-item bg-secondary">Tienda: $!oferta.tienda</p>
-                                <p class="list-group-item bg-secondary">Colonia: $!oferta.colonia</p>
+                                <p class="list-group-item bg-secondary" data-toggle="tooltip" data-placement="top" title="Vigencia de la oferta">Vigencia: $!oferta.fecha</p>
+                                <p class="list-group-item bg-secondary" data-toggle="tooltip" data-placement="top" title="Precio de la oferta">Precio: $!oferta.precio</p>
+                                <p class="list-group-item bg-secondary" data-toggle="tooltip" data-placement="top" title="Nombre de la tienda donde se encuentra la oferta">Tienda: $!oferta.tienda</p>
+                                <p class="list-group-item bg-secondary" data-toggle="tooltip" data-placement="top" title="Colonia donde se encuentra la tienda">Colonia: $!oferta.colonia</p>
                               </div>
                         </div>
                     </div>

@@ -1,12 +1,12 @@
 <div class="container shadow-lg p-3 mb-5 rounded" >
     <div class="container-sm text-center" id="pnlPrincipal">
         <div class="container-sm text-center" >
-            <h1 style="text-align:center;">Agregar una oferta</h1>
+            <h1 style="text-align:center;" data-toggle="tooltip" data-placement="top" title="Título del área para añadir ofertas">Agregar una oferta</h1>
             <div class="container-sm text-center" id="pnloferta">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Escriba el id de el producto..." id="producto">
+                    <input type="text" class="form-control" placeholder="Escriba el id de el producto..." id="producto"  data-toggle="tooltip" data-placement="top" title="Ingresa el id del producto a ofertar">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button" id="buscar">Buscar</button>
+                        <button class="btn btn-outline-primary" type="button" id="buscar"  data-toggle="tooltip" data-placement="top" title="Da click para buscar el producto a ofertar">Buscar</button>
                     </div>
                 </div>
                 <div class="container">
@@ -14,18 +14,20 @@
                     <div class="row">
                         <div class="col">
                             <form class="form">
-                                <label for="nombre_new">Nombre</label>
-                                <input type="text" class="form-control" id="nombre_new" value="$Nombre">
-                                <label for="tamanio_new">Tamaño</label>
-                                <input type="text" class="form-control" id="tamanio_new" value="$Tamaño">
-                                <label for="precio_new">Precio</label>
-                                <input type="text" class="form-control" id="precio_new" value="$Precio">
-                                <label for="precio_new">Descuento %</label>
-                                <input type="text" class="form-control" id="descuento_new" value="$Descuento">
+                                <label for="nombre_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input Nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre_new" value="$Nombre" data-toggle="tooltip" data-placement="top" title="Nombre del producto a ofertar">
+                                <label for="tamanio_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input Tamaño">Tamaño</label>
+                                <input type="text" class="form-control" id="tamanio_new" value="$Tamaño" data-toggle="tooltip" data-placement="top" title="Tamaño del producto a ofertar">
+                                <label for="precio_new" data-toggle="tooltip" data-placement="top" title="Etiqueta del input Precio">Precio</label>
+                                <input type="text" class="form-control" id="precio_new" value="$Precio" data-toggle="tooltip" data-placement="top" title="Ingresa el nuevo precio del producto a ofertar">
+                                <label for="precio_new"  data-toggle="tooltip" data-placement="top" title="Etiqueta del input porcentaje de descuento">Descuento %</label>
+                                <input type="text" class="form-control" id="descuento_new" value="$Descuento" data-toggle="tooltip" data-placement="top" title="Ingresa el descuento del producto a ofertar">
+                                <label for="precio_new"  data-toggle="tooltip" data-placement="top" title="Etiqueta de la duración del descuento">Duración</label>
+                                <input type="text" class="form-control" id="duracion_new" value="$Duracion" data-toggle="tooltip" data-placement="top" title="Duración de la oferta del producto">
                                 <br/>
                                 <hr class="mt-3 mb-3" style="height:2px;border-width:0;color:gray;background-color:gray" />
                                 <br/>
-                                <button class="btn btn-outline-secondary" type="button" id="anadir">Añadir oferta</button>
+                                <button class="btn btn-outline-secondary" type="button" id="anadir" data-toggle="tooltip" data-placement="top" title="Da click para añadir la oferta">Añadir oferta</button>
                             </form>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top " id="navBar">
   <!-- Brand obtenido del motor Velocity y implementación de navegación-->
   <a class="navbar-brand" href="#">$proyecto</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-toggle="tooltip" data-placement="top" title="Botón del menú desplegable">
     <span class="navbar-toggler-icon"></span>
   </button>
   <!-- Lista de secciones del documento -->
@@ -11,18 +11,18 @@
     <ul class="navbar-nav">
       <!-- Enlace a la sección 'misión' -->
       <li class="nav-item">
-        <a class="nav-link text-light" href="#mision">Misión</a>
+        <a class="nav-link text-light" href="#mision" data-toggle="tooltip" data-placement="top" title="Botón con destino a el apartado misión">Misión</a>
       </li>
       <!-- Enlace a la sección 'buscar' -->
       <li class="nav-item">
-        <a class="nav-link text-light" href="#buscar">Buscar</a>
+        <a class="nav-link text-light" href="#buscar" data-toggle="tooltip" data-placement="top" title="Botón on destino al apartado busqueda">Buscar</a>
       </li>
       <!-- Enlace a la sección 'registro' -->
       <li class="nav-item">
-        <a class="nav-link text-light" href="#registro">Registrarme</a>
+        <a class="nav-link text-light" href="#registro" data-toggle="tooltip" data-placement="top" title="Botón con destino al apartado de registro">Registrarme</a>
       </li>
     </ul>
-    <!-- Sección de incio de sesión -->
-      #parse("spark/velocity/index/login.vm")
   </div>
+  <!-- Sección de incio de sesión -->
+      #parse("spark/velocity/index/login.vm")
 </nav>

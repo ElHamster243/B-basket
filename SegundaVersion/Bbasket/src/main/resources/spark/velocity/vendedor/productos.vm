@@ -1,22 +1,28 @@
 <div class="container">
-    <h1>Agregar un producto</h1>
+    <h1 data-toggle="tooltip" data-placement="top" title="Área para agregar un producto">Agregar un producto</h1>
     <div class="row">
         <div class="col-6">
-            <label for="nombre_new">$Nombre</label>
-            <input type="text" class="form-control" id="nombre_new">
-            <label for="tamanio_new">$Tamanio</label>
-            <input type="text" class="form-control" id="tamanio_new">
-            <label for="medida_new">$Medida</label>
-            <select class="form-control">
-                <option>Gr</option>
-                <option>Kg</option>
-                <option>Lts</option>
+            <label for="nombre_new" data-toggle="tooltip" data-placement="top" title="Etiqueta para el input nombre">$Nombre</label>
+            <input type="text" class="form-control" id="nombre_new" data-toggle="tooltip" data-placement="top" title="Ingresa el nombre del producto">
+            <label for="tamanio_new" data-toggle="tooltip" data-placement="top" title="Etiqueta para el input tamaño">$Tamanio</label>
+            <input type="text" class="form-control" id="tamanio_new" data-toggle="tooltip" data-placement="top" title="Ingresa el tamaño del producto">
+            <label for="medida_new" data-toggle="tooltip" data-placement="top" title="Etiqueta para el input medida">$Medida</label>
+            <select class="form-control" data-toggle="tooltip" data-placement="top" title="Selecciona la medida del producto de la lista">
+                <option data-toggle="tooltip" data-placement="top" title="Opción gramos">Gr</option>
+                <option data-toggle="tooltip" data-placement="top" title="Opción Kilogramos">Kg</option>
+                <option data-toggle="tooltip" data-placement="top" title="Opción Litros">Lts</option>
             </select>
-            <label for="cantidad_new">$Cantidad</label>
-            <input type="text" class="form-control" id="cantidad_new">
+            <label for="cantidad_new" data-toggle="tooltip" data-placement="top" title="Etiqueta para el input cantidad">$Cantidad</label>
+            <input type="text" class="form-control" id="cantidad_new" data-toggle="tooltip" data-placement="top" title="Ingresa la cantidad del producto">
         </div>
         <div class="col-6">
-            <img style="width:50%;" src="http://lorempixel.com/500/200">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="foto" data-toggle="tooltip" data-placement="top" title="Etiqueta para el input foto del producto">Imagen del producto</span>
+            </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="foto">
+                <label class="custom-file-label" for="foto" data-toggle="tooltip" data-placement="top" title="Da click para seleccionar un archivo desde tu pc">Elige un archivo</label>
+            </div>
         </div>
     </div>
 </div>
@@ -24,13 +30,13 @@
     <br/>
     <div class="row">
         <div class="col-3">
-            <button class="btn btn-secondary btn-outline my-2 my-sm-0" style="width: 100%;" type="submit">Borrar</button>
+            <button class="btn btn-secondary btn-outline my-2 my-sm-0" style="width: 100%;" type="submit" data-toggle="tooltip" data-placement="top" title="Botón con la opción de borrar el producto">Borrar</button>
         </div>
         <div class="col-3">
-            <button class="btn btn-secondary btn-outline my-2 my-sm-0" style="width: 100%;" type="submit">Actualizar</button>
+            <button class="btn btn-secondary btn-outline my-2 my-sm-0" style="width: 100%;" type="submit" data-toggle="tooltip" data-placement="top" title="Botón con la opción de actualizar el producto">Actualizar</button>
         </div>
         <div class="col-3">
-            <button class="btn btn-secondary btn-outline my-2 my-sm-0" style="width: 100%;" type="submit">Crear</button>
+            <button class="btn btn-secondary btn-outline my-2 my-sm-0" style="width: 100%;" type="submit" data-toggle="tooltip" data-placement="top" title="Botón con la opción de añadir el producto">Añadir</button>
         </div>
     </div>
 </div>

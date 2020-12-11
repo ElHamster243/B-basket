@@ -1,9 +1,9 @@
 <!-- Formulario de incio de sesión -->
 <form class="form-inline my-2 my-lg-1">
     <!-- Input 'usuario'-->
-    <input class="form-control mr-sm-2" type="text" placeholder="Usuario" aria-label="Search">
+    <input class="form-control mr-sm-2" type="text" placeholder="Usuario" aria-label="Search" data-toggle="tooltip" data-placement="top" title="Ingresa tu usuario">
     <!-- Input 'passwd'-->
-    <input class="form-control mr-sm-2" type="password" placeholder="Contraseña" aria-label="Search">
+    <input class="form-control mr-sm-2" type="password" placeholder="Contraseña" aria-label="Search" data-toggle="tooltip" data-placement="top" title="Ingresa tu contraseña">
     <!-- Botón 'login'-->
-    <button class="btn btn-secondary" type="submit" id="btnLogin">Aceder</button>
+    <button class="btn btn-secondary" type="submit" id="btnLogin" data-toggle="tooltip" data-placement="top" title="Da click para continuar">Aceder</button>
 </form>

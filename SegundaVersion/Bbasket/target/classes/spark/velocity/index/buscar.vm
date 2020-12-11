@@ -3,15 +3,15 @@
         <div class="container-sm text-center" >
             <div class="container-sm text-center" id="pnlBusqueda">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Escriba el nombre de un producto..." id="producto">
+                    <input type="text" class="form-control" placeholder="Escriba el nombre de un producto..." id="producto" data-toggle="tooltip" data-placement="top" title="Ingresa el nombre de tu producto">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button" id="buscar">Buscar</button>
+                        <button class="btn btn-outline-primary" type="button" id="buscar" data-toggle="tooltip" data-placement="top" title="Área de busqueda">Buscar</button>
                     </div>
                 </div>
             </div>
             <div class="row" id="pnlTabla">
                 <div class="col-sm">
-                    <p class="h3 text-white">Resultados de la búsqueda</p>
+                    <p class="h3 text-white" data-toggle="tooltip" data-placement="top" title="Área de resultados de la búsqueda">Resultados de la búsqueda</p>
                     <div class="bg-white">
                         #parse("spark/velocity/index/tabla.vm")
                     </div>
