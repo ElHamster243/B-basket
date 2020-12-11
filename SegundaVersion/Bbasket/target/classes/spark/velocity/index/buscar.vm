@@ -12,31 +12,11 @@
             <div class="row" id="pnlTabla">
                 <div class="col-sm">
                     <p class="h3 text-white">Resultados de la búsqueda</p>
-                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <div class="bg-white">
                         #parse("spark/velocity/index/tabla.vm")
                     </div>
                 </div>
-                <div class="col-sm" id="pnlDetalles">
-                    <div class="row">
-                        <div class="col-sm align-middle">
-                            <img src="assets/img/icon.png" alt="foto" width="200px" class="img-thumbnail mx-auto rounded d-block ">
-                        </div>
-                        <div class="col-sm">
-                            <div class="row ">
-                                <p class="h2 text-white">$!oferta.nombre</p>
-                            </div>
-                            <div class="list-group">
-                                <p class="list-group-item bg-secondary">
-                                  Vigencia: $!oferta.fecha
-                                </p>
-                                <p class="list-group-item bg-secondary">Precio: $!oferta.precio</p>
-                                <p class="list-group-item bg-secondary">Tienda: $!oferta.tienda</p>
-                                <p class="list-group-item bg-secondary">Colonia: $!oferta.colonia</p>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                #parse("spark/velocity/index/detalles.vm")
         </div>
     </div>
 </div>

@@ -12,11 +12,12 @@ public class OfertaDAO {
     //Agregar oferta a la base de datos
     public void registrarOferta(Oferta o){
         try {
-            String query =  " insert into "+TABLA+" (cantidad, precio)"
-                            + " values (?, ?)";
+            String query =  " insert into "+TABLA+" (cantidad, precio, tienda)"
+                            + " values (?, ?, ?)";
             PreparedStatement preparedStmt = conexion.conectar().prepareStatement(query);
             preparedStmt.setInt(1, 1);
             preparedStmt.setDouble(2, (o.getPrecio()/o.getCantidad()));
+            preparedStmt.setInt(3, o.getTienda());
             preparedStmt.execute();
         } catch (SQLException sqlException) {
             System.out.println("Estado SQL: "+sqlException.getSQLState());
@@ -53,11 +54,11 @@ public class OfertaDAO {
         }
     }
     //Consulta de todas las ofertas
-    public List <Oferta> getOfertas(){
+    public List <Oferta> getOfertas(int idTienda){
         Statement stmt;
         try {
             stmt=conexion.conectar().createStatement();
-            ResultSet rs=stmt.executeQuery("select * from "+TABLA);
+            ResultSet rs=stmt.executeQuery("select * from "+TABLA+" where id=`"+idTienda+"`");
             if(!rs.next()){
                 System.out.println("\nSin ofertas registradas en la base de datos.");
             }
@@ -65,7 +66,8 @@ public class OfertaDAO {
                 int id=rs.getInt("id");
                 int cantidad=rs.getInt("cantidad");
                 double precio=rs.getDouble("precio");
-                Oferta o=new Oferta(id, cantidad, precio);
+                int tienda=rs.getInt("tienda");
+                Oferta o=new Oferta(id, cantidad, precio, tienda);
                 this.ofertas.add(o);
                 System.out.println(o.toString());
             }

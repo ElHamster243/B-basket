@@ -14,11 +14,12 @@ public class ProductoDAO {
     //Agregar producto a la base de datos
     public void registrarProducto(Producto p){
         try {
-            String query =  " insert into "+TABLA+" (nombre, tamano)"
-                            + " values (?, ?)";
+            String query =  " insert into "+TABLA+" (nombre, tamano, foto)"
+                            + " values (?, ?, ?)";
             PreparedStatement preparedStmt = conexion.conectar().prepareStatement(query);
             preparedStmt.setString(1, p.getNombre());
             preparedStmt.setString(2, p.getTamano());
+            preparedStmt.setBlob(3, p.getFoto());
             preparedStmt.execute();
         } catch (SQLException sqlException) {
             System.out.println("Estado SQL: "+sqlException.getSQLState());
@@ -80,7 +81,8 @@ public class ProductoDAO {
                 int id=rs.getInt("id");
                 String nombre=rs.getString("nombre");
                 String tamano=rs.getString("tamano");
-                Producto p=new Producto(id, nombre, tamano);
+                Blob foto=rs.getBlob("foto");
+                Producto p=new Producto(id, nombre, tamano, foto);
                 this.productos.add(p);
             }
             
