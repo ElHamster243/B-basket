@@ -1,0 +1,25 @@
+<!-- Barra de navegación de la página 'index'-->
+<!-- Es fija, abarca todo el ancho de la pantalla, esta puesta en la parte superior, el background 'secondary'-->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top ">
+  <!-- Brand obtenido del motor Velocity-->
+  <a class="navbar-brand text-light">${proyecto}</a>
+  <!-- Boton para acceso responsivo-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Lista de secciones del documento -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- Enlace a la sección 'perfil' -->
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="#perfil">Perfil</a>
+      </li>
+      <!-- Enlace a la sección 'busqueda' -->
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#busqueda">Buscar</a>
+      </li>
+    </ul>
+    <!-- Sección de cierre de sesión -->
+      #parse("spark/velocity/comprador/logout.vm")
+  </div>
+</nav>

@@ -1,0 +1,23 @@
+<!-- Pestaña de perfil de usuario-->
+<div class="jumbotron jumbotron-fluid bg-secondary"  id="perfil">
+<!-- Mensaje de bienvenida al usuario-->
+  <br>
+  <br>
+  <h1 class="display-5">Bienvenido $usuario</h1>
+  <br>
+  <!-- Estructura del contenido-->
+  <div class="container">
+    <div class="col-sm" id="pnlDetalles">
+      <div class="row">
+        <div class="col-sm">
+          <!-- Etiqueta del nombre del comprador-->
+          <p class="col-12 text-white">Nombre:  $!usuario.nombre</p>
+          <!-- Etiqueta del nombre de usuario-->
+          <p class="col-12 text-white">Usuario:  $!usuario.username</p>
+          <!-- Etiqueta de el correo electrónico-->
+          <p class="col-12 text-white">Correo:  $!usuario.correo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

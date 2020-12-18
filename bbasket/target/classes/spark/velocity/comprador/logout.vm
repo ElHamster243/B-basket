@@ -1,0 +1,5 @@
+<!-- Formulario para generar un cierre de sesión -->
+<form class="form-inline my-2 my-lg-0">
+    <!-- Botón 'cerrar sesión'-->
+    <button class="btn btn-danger my-2 my-sm-0" type="submit">Cerrar sesión</button>
+</form>

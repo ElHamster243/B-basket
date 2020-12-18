@@ -61,7 +61,6 @@ public class Main {
             //Cargar página comprador
             get("/:usuario/:passwd", (req,res)->{
                 Cliente c=ClienteDAO.userPasswd(req.params(":usuario"), req.params(":passwd"));
-                
                 System.out.println(req.params(":usuario")+ req.params(":passwd"));
                 if(c!=null){
                     System.out.println("Comprador:"+c.getNombres());

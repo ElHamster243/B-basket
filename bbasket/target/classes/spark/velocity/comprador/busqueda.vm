@@ -1,0 +1,57 @@
+<!-- Estructura de la pestaña de busqueda-->
+<div class="container shadow-lg p-3 mb-5 rounded" >
+    <!-- Panel principal -->
+    <div class="container-sm text-center" id="pnlPrincipal">
+        <div class="container-sm text-center" >
+            <div class="container-sm text-center" id="pnlBusqueda">
+                <!-- Formulario para la busqueda de un producto -->
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Input y etiqueta para ingresar el producto a buscar -->
+                            <div class="input-group col-6 col-md-4">
+                                <label class="text-white" for="producto_new">Producto:  </label>
+                                <input type="text" class="form-control" id="producto_new">
+                            </div> 
+                            <!-- Input y etiqueta para ingresar la marca a buscar -->
+                            <div class="input-group col-6 col-md-4">
+                                <label class="text-white" for="marca_new">Marca:  </label>
+                                <input type="text" class="form-control" id="marca_new">
+                            </div>
+                            <br>
+                            <br>
+                            <!-- Input y etiqueta para ingresar la colonia a buscar -->
+                            <div class="btn-group col-6 col-md-4">
+                                <button type="button" class="btn btn-secondary dropdown-toggle text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Colonia
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">$colonias.colonia1</a>
+                                    <a class="dropdown-item" href="#">$colonias.colonia2</a>
+                                    <a class="dropdown-item" href="#">$colonias.colonia3</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="container">
+                        <div class="row">
+                            <!-- Botón que nos permite realizar la busqueda -->
+                            <div class="col align-self-center">
+                                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            <!-- Tabla con los resultados de nuestra búsqueda -->
+            <div class="row" id="pnlTabla">
+                <div class="col-sm">
+                    <p class="h3 text-white">Resultados de la búsqueda</p>
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                        #parse("spark/velocity/comprador/tabla.vm")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
