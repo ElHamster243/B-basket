@@ -1,7 +1,7 @@
-<div class="container shadow-lg p-3 mb-5 rounded" id="registro">
+<form>
+    <div class="container shadow-lg p-3 mb-5 rounded" id="registro">
     <p class="h3 text-center">Crear una cuenta en $proyecto</p>
-    <div class="col-sm shadow-lg p-3 mb-5 rounded">
-        <form>
+        <div class="col-sm shadow-lg p-3 mb-5 rounded">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="email_new">Correo electrónico</label>
@@ -38,6 +38,6 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary col">Registrarme</button>
-        </form>
+        </div>
     </div>
-</div>
+</form>

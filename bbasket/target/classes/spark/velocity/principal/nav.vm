@@ -1,13 +1,17 @@
 <!-- Barra de navegación de la página 'index'-->
 <!-- Es fija, abarca todo el ancho de la pantalla, esta puesta en la parte superior, el background 'secondary'-->
-<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top " id="navBar">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top ">
   <!-- Brand obtenido del motor Velocity-->
   <a class="navbar-brand text-light">${proyecto}</a>
+  <!-- Boton para acceso responsivo-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   <!-- Lista de secciones del documento -->
-  <div class="collapse navbar-collapse" id="nav">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <!-- Enlace a la sección 'misión' -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link text-light" href="#mision">Misión</a>
       </li>
       <!-- Enlace a la sección 'registro' -->
@@ -16,8 +20,6 @@
       </li>
     </ul>
     <!-- Sección de incio de sesión -->
-    <div>
       #parse($login)
-    </div>
   </div>
 </nav>
