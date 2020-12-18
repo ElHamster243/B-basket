@@ -4,6 +4,7 @@ public class Oferta {
     private int id;
     private int cantidad;
     private double precio;
+    private int tienda;
 
     public int getId(){
         return this.id;
@@ -23,13 +24,22 @@ public class Oferta {
     public void setPrecio(double precio){
         this.precio=precio;
     }
-    public Oferta (int id, int cantidad, double precio){
+    public Oferta (int id, int cantidad, double precio, int tienda){
         this.setId(id);
         this.setCantidad(cantidad);
         this.setPrecio(precio);
+        this.setTienda(tienda);
     }
+    
+    private void setTienda(int tienda) {
+        this.tienda=tienda;
+    }
+
     @Override
     public String toString() {
         return "\nID: "+getId()+" \nCantidad: "+getCantidad()+" "+"\nPrecio: "+getPrecio();
     }
+	public int getTienda() {
+		return tienda;
+	}
 }
