@@ -1,0 +1,22 @@
+#parse("spark/velocity/layout.vm")
+#@mainLayout()
+    <!-- Menu desplegable de las secciones del index.vm -->
+    <!-- Sección de incio de sesión -->
+    <div class="container-fluid bg-secondary shadow-lg p-3 mb-5 rounded d-flex justify-content-center">
+        <!-- Formulario de incio de sesión -->
+        <div class="panel-body font-weight-bolder shadow-lg">
+            <!-- Input 'usuario'-->
+                <p class="display-3"></p>
+                <h1 class="display-4 text-center font-weight-bolder shadow-lg p-3 mb-5 rounded bg-dark">Inicia sesión</h1>
+                <label class="col text-white">Nombre de usuario:</label>
+                <input type="text" class="form-control col" id="usuario" placeholder="Usuario..." required/><br/>
+                <!-- Input 'passwd'-->
+                <label class="col text-white">Contraseña:</label>
+                <input type="password" class="form-control col" id="password"  placeholder="Contraseña..." required/><br/>
+                <!-- Botón 'login'-->
+                <div class="panel-body" id="login_post"></div>
+                <button class="btn btn-primary col" id="btnlogin">Aceder</button>
+            </div>
+    </div>
+    <script src="js/login.js"></script>
+#end

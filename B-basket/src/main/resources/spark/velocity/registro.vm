@@ -1,0 +1,49 @@
+#parse("spark/velocity/layout.vm")
+#@mainLayout()
+        <!-- Sección 'registro' -->
+        <div class="container-fluid bg-secondary shadow-lg p-3 mb-5 rounded">
+            <!-- Marcador a sección 'registro' -->
+            <p class="display-3"></p>
+            <h1 class="display-3  text-center font-weight-bolder shadow-lg p-3 mb-5 rounded bg-dark" id="registro">Registro</h1>
+            <!-- Sección 'registro'-->
+            <div class="container shadow-lg p-3 mb-5 rounded bg-secondary" id="registro">
+                
+                <p class="h3 text-center shadow-lg p-3 mb-5 rounded bg-dark">Crear una cuenta en $proyecto</p>
+                <div class="col-sm shadow-lg p-3 mb-5 rounded  bg-dark">
+                    <form>
+                        <div class="form-row shadow-lg p-3 mb-5 rounded">
+                                <div class="form-group col-md-6">
+                                    <label for="nombres_new">Nombre(s):</label>
+                                <input type="text" class="form-control col" id="nombres_new" placeholder="Escriba su(s) nombre(s)" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="apellidos_new">Apellido(s):</label>
+                                <input type="text" class="form-control" id="apellidos_new" placeholder="Escriba su(s) apellidos(s)" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email_new">Correo electrónico:</label>
+                                <input type="email" class="form-control" id="email_new" placeholder="Escriba correo." required>
+                            </div>
+                            <div class="form-group col">
+                               <label for="usuario_new">Usuario:</label>
+                                <input type="text" class="form-control" id="usuario_new" placeholder="Escriba su nombre de usuario" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="passwd_new">Contraseña:</label>
+                                <input type="password" class="form-control required" id="passwd_new" placeholder="Escriba contraseña" >
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="passwd_new1">Confirme su contraseña:</label>
+                                <input type="password" class="form-control" id="passwd_new1" placeholder="Escriba contraseña" required>
+                                
+                                <div class="panel-body" id="postRegistro"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-secondary col font-weight-bolder" id="crear">Crear cuenta</button>
+                        
+                    </form>
+                </div>
+            </div>
+    </div>
+    <script src="js/registro.js"></script>
+#end

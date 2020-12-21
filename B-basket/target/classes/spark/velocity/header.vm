@@ -1,0 +1,52 @@
+
+<header id="header">
+    <nav class="navbar bg-dark shadow-lg  rounded text-center fixed-top">
+        <div class="shadow-lg rounded col" class="navH">
+        <h5>
+            <!-- Determina que elemento colocar en la barra de navegación dependiendo de la variable 'content'-->
+            <!-- Proporciona una experiencia de navegación responsiva-->
+            <!-- Navegación logeado-->
+            #if ( $pagina == "bienvenida" )
+                <a class="text-light font-weight-bolder nav-link" href="/$c.usuario/$c.password/perfil">Perfil</a>
+            #end
+            #if ( $pagina == "perfil" )
+                <a class="text-light font-weight-bolder nav-link" href="/$c.usuario/$c.password/bienvenida">Buscar</a>
+            #end
+            <!-- Navegación externa-->
+            #if ( $pagina == "index" )
+                <a class="text-light font-weight-bolder nav-link" href="/registro">Registro</a>
+            #end
+            #if ( $pagina == "acceso" )
+                <a class="text-light font-weight-bolder nav-link" href="/../">Inicio</a>
+            #end
+            #if ( $pagina == "registro" )
+                <a class="text-light font-weight-bolder nav-link" href="/../">Inicio</a>
+            #end
+        </h5>
+        </div>
+        <p class="font-weight-bolder rounded col h1">
+            $proyecto
+        </p>
+        <div class="shadow-lg rounded col text-center" class="navH">
+        <h5>
+            <!-- Navegación externa-->
+            #if ( $pagina == "index" )
+                <a class="text-light font-weight-bolder nav-link" href="/acceso">Acceso</a>
+            #end
+            #if ( $pagina == "acceso" )
+                <a class="text-light font-weight-bolder nav-link" href="/../registro">Registro</a>
+            #end
+            #if ( $pagina == "registro" )
+                <a class="text-light font-weight-bolder nav-link" href="/../acceso">Acceso</a>
+            #end
+            <!-- Navegación logeado-->
+            #if ( $pagina == "bienvenida" )
+                <a class="text-light font-weight-bolder nav-link bg-danger" href="/../">Salir</a>
+            #end
+            #if ( $pagina == "perfil" )
+                <a class="text-light font-weight-bolder nav-link bg-danger" href="/../">Salir</a>
+            #end
+        </h5>
+        </div>
+    </nav>
+</header>

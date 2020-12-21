@@ -1,0 +1,7 @@
+<footer class="bg-dark shadow-lg rounded text-center fixed-bottom">
+    <div >
+        <p class="text-light font-weight-bolder">
+            Universidad Veracruzana - Sistemas Web - LTC
+        </p>
+    </div>
+</footer>

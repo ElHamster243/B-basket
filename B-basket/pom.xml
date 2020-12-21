@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Project Object Model  -->
+  <!-- Arquetipo Maven --> 
+  <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- Versión de Arquetipo Maven -->
+  <modelVersion>4.0.0</modelVersion>
+  <!-- Nombre del paquete pricnicpal del proyecto -->
+  <groupId>mx.uv.web.bbasket</groupId>
+  <!-- Nombre del artefacto generado -->
+  <artifactId>B-basket</artifactId>
+  <!--Versión del proyecto -->
+  <version>2</version>
+  <!-- Nombre del proyecto -->
+  <name>B-basket</name>
+  <!-- Sitio de despliegue -->
+  <url>https://b-basket.herokuapp.com/bbasket</url>
+  <!-- Propiedades del proyecto -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+  <!-- Dependencias del proyecto -->
+  <dependencies>
+    <!-- JUnit -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- SparkJava -->
+    <dependency>
+      <groupId>com.sparkjava</groupId>
+      <artifactId>spark-core</artifactId>
+      <version>2.9.3</version>
+    </dependency>
+    <!-- Gson -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.6</version>
+    </dependency>
+    <!-- VelocitySpark -->
+    <dependency>
+      <groupId>com.sparkjava</groupId>
+      <artifactId>spark-template-velocity</artifactId>
+      <version>2.7.1</version>
+    </dependency>
+    <!-- MySQL -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.22</version>
+    </dependency>
+    <!-- Logger -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.21</version>
+    </dependency> 
+    <!-- Para el path estático -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.16</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <!-- Como sé construye el proyecto -->
+  <build>
+    <!-- Plugins para el proyecto -->
+    <plugins>
+      <!-- Plugin maven -->
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.3.2</version>
+          <configuration>
+              <source>11</source>
+              <target>11</target>
+          </configuration>
+      </plugin>
+      <!-- Plugin para incluir todas las dependencias en un paquete .jar -->
+      <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <executions>
+              <execution>
+                  <phase>package</phase>
+                  <goals>
+                      <goal>single</goal>
+                  </goals>
+              </execution>
+          </executions>
+          <configuration>
+              <descriptorRefs>
+                  <!-- This tells Maven to include all dependencies -->
+                  <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
+              <archive>
+                  <manifest>
+                      <mainClass>mx.uv.web.bbasket.App</mainClass>
+                  </manifest>
+              </archive>
+          </configuration>
+      </plugin>
+      <!-- Plugin para desplegar el paquete .jar con Heroku-->
+      <plugin>
+        <groupId>com.heroku.sdk</groupId>
+        <artifactId>heroku-maven-plugin</artifactId>
+        <version>3.0.4</version>
+        <configuration>
+            <jdkVersion>11</jdkVersion>
+            <!-- Nombre de la aplicación de heroku -->
+            <appName>heroku-spark</appName> 
+            <processTypes>
+                <!-- Modo de despliegue de Heroku -->
+                <web>java -jar ./target/B-basket-2-jar-with-dependencies.jar</web>
+            </processTypes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

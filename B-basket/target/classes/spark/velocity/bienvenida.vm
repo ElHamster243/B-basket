@@ -1,0 +1,76 @@
+#parse("spark/velocity/layout.vm")
+#@mainLayout()
+<!-- Contenedor principal -->
+<div class="container bg-dark d-block shadow-lg p-3 mb-5 rounded">
+    <!-- Sección 'misión' -->
+    <div class="container-fluid bg-secondary shadow-lg p-3 mb-5 rounded" id="misioncont">
+        <!-- Marcador a sección 'misión' -->
+        <p class="display-3"></p>
+        <h1 class="display-4 text-center font-weight-bolder p-3 shadow-lg p-3 mb-5 rounded bg-dark" >Misión</h1>
+        <!-- Vm 'misión'-->
+        <div class="jumbotron jumbotron-fluid bg-dark shadow-lg p-3 mb-5 rounded"  id="mision">
+        <h1 class=" font-weight-bolder  text-center shadow-lg p-3 mb-5 rounded">Bienvenido $c.nombres</h1>
+        <div class="container shadow-lg p-3 mb-5 rounded">
+            <p class="lead text-justify">
+                Las condiciones actuales del planeta requieren de algún método para poder comprar abarrotes,
+                y simultáneamente reducir la exposición al mínimo. Nuestra misión al desarrollar este sistema 
+                es el ofrecer al público en
+                general un medio para poder comparar precios de los productos de la canasta básica disponibles 
+                en establecimientos de su comunidad sin salir de casa.
+            </p>
+        </div>
+    </div>
+    <div class="container-sm bg-secondary shadow-lg p-3 mb-5 rounded text-center" id="misioncont">
+        <!-- PRODUCTOS -->
+        <h2 class="font-weight-bolder bg-danger text-center shadow-lg p-3 mb-5 rounded">CocaCola</h2>
+        <div class="row p-2">
+        #foreach($p in $productos)
+            #if($p.marca=='CocaCola')
+                <div class="card text-white bg-danger shadow-lg rounded font-weight-bolder col">
+                    <div class="card-header">$p.producto</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Tamaño $p.tamano</h5>
+                        <p class="card-text">Precio $ $p.precio</p>
+                        <p class="card-text">$p.tienda</p>
+                        <p class="card-text">$p.colonia, $p.calle, # $p.numero</p>
+                    </div>
+                </div>
+            #end
+        #end
+    </div>    
+     <!-- PRODUCTOS -->
+        <h2 class="display-5 font-weight-bolder bg-success text-center shadow-lg p-3 mb-5 rounded">Clemente Jacques</h2>
+        <div class="row">
+        #foreach($p in $productos)
+            #if($p.marca=='Clemente Jacques')
+                <div class="card text-white bg-success shadow-lg rounded font-weight-bolder col">
+                    <div class="card-header">$p.producto</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Tamaño $p.tamano</h5>
+                        <p class="card-text">Precio $ $p.precio</p>
+                        <p class="card-text">$p.tienda</p>
+                        <p class="card-text">$p.colonia, $p.calle, # $p.numero</p>
+                    </div>
+                </div>
+            #end
+        #end
+    </div>      
+     <h2 class="display-5 font-weight-bolder bg-warning text-center shadow-lg p-3 mb-5 rounded">Kole</h2>
+        <div class="row">
+        #foreach($p in $productos)
+            #if($p.marca=='Kole')
+                <div class="card text-white bg-warning shadow-lg rounded font-weight-bolder col">
+                    <div class="card-header">$p.producto</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Tamaño $p.tamano</h5>
+                        <p class="card-text">Precio $ $p.precio</p>
+                        <p class="card-text">$p.tienda</p>
+                        <p class="card-text">$p.colonia, $p.calle, # $p.numero</p>
+                    </div>
+                </div>
+            #end
+        #end
+    </div>   
+    </div>
+</div>
+#end
