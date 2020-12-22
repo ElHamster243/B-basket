@@ -16,8 +16,11 @@ import mx.uv.web.bbasket.model.Cliente;
 import mx.uv.web.bbasket.util.Conexion;
 
 public class ClienteDAO {
-    List<Cliente>compradores=new ArrayList<>();
+	//
+    private List<Cliente>compradores=new ArrayList<>();
+	//
     private static final String TABLA="cliente";
+	//Autentificación
     public static boolean authenticate(String username, String password) {
         if (username.isEmpty() || password.isEmpty()) {
             return false;
@@ -28,12 +31,14 @@ public class ClienteDAO {
         }
         return true;
     }
-
+	//Registrar cliente de tipo booleano
     public static boolean registrarCliente(Cliente c){
         boolean resultado=false;
         try {
+		
             String query =  " insert into "+TABLA+" (nombres, apellidos, usuario, correo, contrasena)"
                             + " values (?, ?, ?, ?, ?)";
+		
             PreparedStatement preparedStmt = Conexion.conectar().prepareStatement(query);
             preparedStmt.setString(1, c.getNombres());
             preparedStmt.setString(2, c.getApellidos());
@@ -44,13 +49,14 @@ public class ClienteDAO {
             System.out.println("Cliente creado.");
             resultado=true;
         } catch (SQLException sqlException) {
+		//
             System.out.println("Estado SQL: "+sqlException.getSQLState());
             System.out.println("Código de error: "+sqlException.getErrorCode());
             System.out.println(sqlException.getMessage());
         }
         return resultado;
     }
-    //Eliminar cuenta de la base de datos mediante el nombre de usuario
+    	//Eliminar cuenta de la base de datos mediante el nombre de usuario
     public static boolean eliminarCliente(String u){
         boolean resultado=false;
         String query = "delete from "+TABLA+" where usuario = ?;";
@@ -66,6 +72,7 @@ public class ClienteDAO {
         }
         return resultado;
     }
+	//Obtener el usuario mediante el username y la contraseña (verifica)
     public static Cliente userPasswd(String user, String passwd){
         Cliente aux=null;
 
