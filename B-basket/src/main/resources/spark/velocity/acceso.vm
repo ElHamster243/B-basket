@@ -1,6 +1,5 @@
 #parse("spark/velocity/layout.vm")
 #@mainLayout()
-    <!-- Menu desplegable de las secciones del index.vm -->
     <!-- Sección de incio de sesión -->
     <div class="container-fluid bg-secondary shadow-lg p-3 mb-5 rounded d-flex justify-content-center">
         <!-- Formulario de incio de sesión -->
