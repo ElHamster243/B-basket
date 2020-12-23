@@ -1,7 +1,7 @@
 # B-basket<br>
 
 #Sistema de consulta y comparación de precios. <br>
-#El despliege demostrativo esta en: https://heroku-spark.herokuapp.com/<br>
+#Website: https://heroku-spark.herokuapp.com/<br>
 #La wiki de la documentación esta en: https://github.com/ElHamster243/B-basket/wiki<br>
 
 #Se incluye el script de la base de datos, la cual utiliza un driver MySQL.<br>
