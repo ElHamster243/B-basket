@@ -8,3 +8,4 @@
 #El contenido que fue desplegado es de la carpeta 'B-basket'<br>
 Sin embargo, la documentación cuenta con enlaces a las carpetas de los repositorios corresponidentes.<br>
 <h2>#Atentamente Omar Alejandro Alonso Lizardi<br></h2>
+#Aquí se sube la segunda versión, que esta en construcción: https://b-basket.herokuapp.com/
